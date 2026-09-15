@@ -2,8 +2,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:nordivex/nordivex_app.dart';
 
 void main() {
-  testWidgets('NordivexSummitApp smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(const NordivexSummitApp());
-    expect(find.byType(NordivexSummitApp), findsOneWidget);
+  testWidgets('NordivexApp carousel smoke test', (WidgetTester tester) async {
+    await tester.pumpWidget(const NordivexApp());
+    expect(find.text('NORDIVEX SUMMITS'), findsOneWidget);
+    expect(find.text('Alpine Summit Registry'), findsOneWidget);
   });
 }
